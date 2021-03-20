@@ -30,9 +30,7 @@ export class CreateUserUseCase {
     await this.usersRepository.save(user)
 
     let userInfo = await this.restProvider.get(this.githubUrl)
-    userInfo = null
-     if (!userInfo) {
-       throw new Error('Fudeu')
-     }
+    const name = userInfo.data[1].name
+    return name
   }
 }
