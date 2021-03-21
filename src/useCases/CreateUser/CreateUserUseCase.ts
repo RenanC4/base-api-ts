@@ -20,17 +20,14 @@ export class CreateUserUseCase {
   }
 
   async execute(data: CreateUserRequestDTO) {
-    console.log('maaaano')
     const userAlreadyExists = await this.usersRepository.findByEmail(data.email)
-    if(userAlreadyExists) {
-      throw new Error('User already exists')
-    }
+   // if(userAlreadyExists) {
+     // throw new Error('User already exists')
+    //}
 
     const user = new User(data)
-    await this.usersRepository.save(user)
-
-    let userInfo = await this.restProvider.get(this.githubUrl)
-    const name = userInfo.data[1].name
-    return name
+     await this.usersRepository.save(user)
+    const ue = 'debugger is running'
+    return ue
   }
 }

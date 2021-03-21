@@ -7,7 +7,9 @@
     "skipLibCheck": true,                           /* Skip type checking of declaration files. */
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,        /* Disallow inconsistently-cased references to the same file. */
-    "sourceMap": true
+    "sourceMap": true,
+    "outDir": "out",
+    "watch": true
   },
   "include": [
     "src/**/*.ts"
